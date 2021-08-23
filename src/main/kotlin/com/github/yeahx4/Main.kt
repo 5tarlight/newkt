@@ -19,10 +19,11 @@ fun main(args: Array<String>) {
 
     val jjs = arrayOf(Companion("짜장"), Companion("짬봉"))
 
-    jjajang.let {
-        println("${it.count}, ${Companion.total}")
-    }
+    for (j in jjs)
+        j.vote()
 
-    println(jjajang.count)
+    for (j in jjs)
+        println("${j.count}, ${Companion.total}")
+
     println()
 }

@@ -3,6 +3,8 @@ package com.github.yeahx4
 import com.github.yeahx4.`object`.Companion
 import com.github.yeahx4.`object`.Counter
 import com.github.yeahx4.funcParam.printVar
+import com.github.yeahx4.observer.AnonymousEventPrinter
+import com.github.yeahx4.observer.EventPrinter
 import com.github.yeahx4.scoop.scope
 
 fun main(args: Array<String>) {
@@ -24,6 +26,12 @@ fun main(args: Array<String>) {
 
     for (j in jjs)
         println("${j.count}, ${Companion.total}")
+
+    println()
+    EventPrinter().start()
+    println()
+    AnonymousEventPrinter().start()
+    println()
 
     println()
 }
